@@ -1,0 +1,17 @@
+from collections.abc import Generator
+
+# pyrefly: ignore [missing-import]
+from sqlalchemy.orm import Session
+
+from app.config.database import SessionLocal
+
+
+def get_db() -> Generator[Session, None, None]:
+
+    db = SessionLocal()
+
+    try:
+        yield db
+
+    finally:
+        db.close()
