@@ -30,39 +30,6 @@ git --version
 
 ---
 
-## Environment Configuration
-
-DocIntel uses environment variables for backend and frontend configuration.
-
-### Backend Environment
-
-Create:
-
-`backend/.env`
-
-Add:
-
-```env
-FRONTEND_URL=http://localhost:3000
-DATABASE_URL=postgresql://docintel:docintel_password@localhost:5432/docintel
-```
-
-### Frontend Environment
-
-Create:
-
-`frontend/.env.local`
-
-Add:
-
-```env
-NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
-```
-
-> **Important:** Do not commit `.env` or `.env.local` files to Git.
-
----
-
 ## Setup & Running Instructions
 
 ### 1. Clone Project
@@ -113,6 +80,18 @@ Open a terminal and navigate to the backend folder:
 ```bash
 cd backend
 ```
+### Backend Environment
+
+Create:
+
+`backend/.env`
+
+Add:
+
+```env
+FRONTEND_URL=http://localhost:3000
+DATABASE_URL=postgresql://docintel:docintel_password@localhost:5432/docintel
+```
 
 Create a Python virtual environment:
 
@@ -162,6 +141,20 @@ Install the frontend dependencies:
 npm install
 ```
 
+### Frontend Environment
+
+Create:
+
+`frontend/.env.local`
+
+Add:
+
+```env
+NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
+```
+
+---
+
 Start the Next.js development server:
 
 ```bash
@@ -171,6 +164,8 @@ npm run dev
 The frontend will be available at: `http://localhost:3000`
 
 ---
+
+
 
 ## Application Usage
 
